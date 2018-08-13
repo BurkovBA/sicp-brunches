@@ -3,7 +3,7 @@
 ; this is implementation of backtracking algorithm in Lisp for 8-queens problem
 
 (define (queens board-size)
-  (define (queen-cols k
+  (define (queen-cols k)
     (if (= k 0)
         (list empty-board)
         (filter
@@ -16,6 +16,7 @@
           (queen-cols (-k 1))))))
    (queen-cols board-size))
 
-(define (safe?))
+(define (safe? k postions)
+)
 
-(define (rest-of-queens))
+(define (adjoin-position))
