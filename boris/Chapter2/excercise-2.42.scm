@@ -20,3 +20,29 @@
 )
 
 (define (adjoin-position))
+
+(define (enumerate-interval low high)
+  (if (> low high)
+   nil
+   (cons low (enumerate-interval (+ low 1) high))
+  )
+)
+
+(define (available-positions queen-cols k)
+ (if (in? index queen-cols) cons()
+ (map (lambda (index) (
+
+ ))
+  (enumerate-interval 1 k)
+ )
+)
+
+(define (in? element list) (
+ (if (equals? list (nil))
+  'false
+  (if (equals? element (car list))
+   'true
+   (in? element (cdr list))
+  )
+ )
+))
