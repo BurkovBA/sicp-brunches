@@ -29,13 +29,21 @@
 )
 
 (define (available-positions queen-cols k)
- (if (in? index queen-cols) cons()
- (map (lambda (index) (
+ (if (in? index queen-cols) cons ()
+  (map (lambda (index) (
 
- ))
-  (enumerate-interval 1 k)
+  ))
+   (enumerate-interval 1 k)
+  )
  )
 )
+
+(define (difference bigger-list smaller-list) (
+ (if (in? car(bigger-list) smaller-list)
+  (difference cdr(bigger-list) smaller-list)
+  (list car(bigger-list) difference(cdr(bigger-list) smaller-list))
+ )
+))
 
 (define (in? element list) (
  (if (equals? list (nil))
