@@ -29,13 +29,10 @@
 )
 
 (define (available-positions queen-cols k)
- (if (in? index queen-cols) cons ()
-  (map (lambda (index) (
-
-  ))
-   (enumerate-interval 1 k)
+  (filter
+   (lambda (index) (safe? index queen-cols))
+   (difference (enumerate-interval 1 k) queen-cols)
   )
- )
 )
 
 (define (difference bigger-list smaller-list) (
