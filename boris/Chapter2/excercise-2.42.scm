@@ -17,6 +17,10 @@
    (queen-cols board-size))
 
 (define (safe? k postions)
+ (filter
+  (lambda (position) (= k-position (length positions)-(index-of position positions)))
+  (available-positions positions k)
+ )
 )
 
 (define (adjoin-position))
